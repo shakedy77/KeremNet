@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
-
+import Like from "../Like/Like";
+import './Comment.css'
 
 interface Props{
     publisherName : string
@@ -7,10 +8,7 @@ interface Props{
 }
 
 const Comment = ({publisherName, content} : Props) : ReactElement => {
-    return <div>
-        <h2>{publisherName}</h2>
-        <h3>{content}</h3>
-    </div>
+    return <div className="Comment">{publisherName} : {content} <Like></Like></div>
 }
 
 export default Comment;

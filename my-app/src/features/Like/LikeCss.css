@@ -1,11 +1,13 @@
 .likeButtonOn{
     color: red;
     background-color: red;
-    size: 2%;
+    width: 2%;
+    height: auto;
 }
 
 .likeButtonOff{
     color: transparent;
     background-color: aliceblue;
-    size: 2%;
+    width: 2%;
+    height: auto;
 }
