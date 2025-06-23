@@ -6,7 +6,7 @@ import transp_heart from './img/transparent-heart.png'
 
 const Like = (): ReactElement => {
     const [liked, toggle] = useToggle();
-    return <button onClick={toggle} className={liked ? "likeButtonOn" : "likeButtonOff"}></button>
+    return <button onClick={toggle} className={liked ? "likeButtonOn" : "likeButtonOff"}>Like</button>
 }
 
 

@@ -5,11 +5,12 @@ import './App.css';
 import Like from './features/Like/Like';
 import Comment from './features/CommentFeatures/Comment/Comment';
 import CommentExpandableList from './features/CommentFeatures/CommentExpandableList/CommentExpandableList';
+import Post from './features/Post/Post';
 
 function App() {
   return (
     <div className="App">
-      <CommentExpandableList></CommentExpandableList>
+      <Post publisherName='user' content='hi im a post'></Post>
     </div>
   );
 }

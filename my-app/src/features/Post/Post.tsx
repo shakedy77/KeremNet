@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import Like from "../Like/Like";
+import CommentExpandableList from "../CommentFeatures/CommentExpandableList/CommentExpandableList";
 
 
 
@@ -11,8 +12,13 @@ interface Props{
 
 }
 
-const GreetingCard = ({publisherName, content} : Props):ReactElement => {
-    return <div className="Post"><h2>{publisherName}</h2>{content}</div>
+const Post = ({publisherName, content} : Props):ReactElement => {
+    return <div className="Post">
+        <h2>{publisherName}</h2>
+        <p>{content}</p>
+        <Like></Like>
+        <CommentExpandableList></CommentExpandableList>
+        </div>
 }
 
-export default GreetingCard;
+export default Post;

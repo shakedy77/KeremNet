@@ -18,8 +18,8 @@ const CommentExpandableList = (): ReactElement => {
 
     return <div className="CommentExpandableList">
         <CommentList items={listValue}></CommentList>
-        <InputBox title="post:" inputValue={inputValue} setValue={setInputValue}></InputBox>
-        <button onClick={AddItem}>post</button>
+        <InputBox title="comment:" inputValue={inputValue} setValue={setInputValue}></InputBox>
+        <button onClick={AddItem}>comment</button>
     </div>
 }
 
