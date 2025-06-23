@@ -3,12 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 import Like from './features/Like/Like';
-import Comment from './features/Comment/Comment';
+import Comment from './features/CommentFeatures/Comment/Comment';
+import CommentExpandableList from './features/CommentFeatures/CommentExpandableList/CommentExpandableList';
 
 function App() {
   return (
     <div className="App">
-      <Comment publisherName='yon' content='heasdfasdfasdfasdfasdfasdfllo'></Comment>
+      <CommentExpandableList></CommentExpandableList>
     </div>
   );
 }

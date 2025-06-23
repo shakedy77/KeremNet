@@ -1,0 +1,26 @@
+import React, { ReactElement, useState} from "react";
+import InputBox from "../../InputBox/InputBox";
+import Comment from "../Comment/Comment";
+import CommentList from "../CommentList/CommentList";
+import './CommentExpandableList.css'
+
+
+
+
+const CommentExpandableList = (): ReactElement => {
+    const [inputValue, setInputValue] = useState<string>('');
+    const [listValue, setListValue] = useState<ReactElement[]>([]);
+    const AddItem = (): void =>{
+        listValue.push(<Comment publisherName="current_user"content={inputValue}></Comment>);
+        setListValue([...listValue]);
+    }
+
+
+    return <div className="CommentExpandableList">
+        <CommentList items={listValue}></CommentList>
+        <InputBox title="post:" inputValue={inputValue} setValue={setInputValue}></InputBox>
+        <button onClick={AddItem}>post</button>
+    </div>
+}
+
+export default CommentExpandableList

@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import Like from "../Like/Like";
+import Like from "../../Like/Like";
 import './Comment.css'
 
 interface Props{
