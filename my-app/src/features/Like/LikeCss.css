@@ -1,0 +1,11 @@
+.likeButtonOn{
+    color: red;
+    background-color: red;
+    size: 2%;
+}
+
+.likeButtonOff{
+    color: transparent;
+    background-color: aliceblue;
+    size: 2%;
+}
