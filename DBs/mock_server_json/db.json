@@ -3,35 +3,33 @@
     {
       "publisherName": "keremist",
       "content": "i really love green and the number six",
-      "postingDate": "Mon Jun 23 2025 18:06:36",
-      "likes": 66,
-      "comments": 
-        [
-          {
-            "publisherName": "keremist1",
-            "content": "wow!",
-            "like": 6
-          },
-          {
-            "publisherName": "keremist1",
-            "content": "wow 2!",
-            "like": 66
-          }
-        ]
+      "publishDate": "2025-06-24T17:12:02+03:00",
+      "likeAmount": 66,
+      "comments": [
+        {
+          "publisherName": "keremist1",
+          "content": "wow!",
+          "likeAmount": 6
+        },
+        {
+          "publisherName": "keremist1",
+          "content": "wow 2!",
+          "likeAmount": 66
+        }
+      ]
     },
     {
       "publisherName": "keremist2",
       "content": "i really love green and the number six too!",
-      "postingDate": "Mon Jun 23 2025 18:07:36",
-      "likes": 6,
-      "comments": 
-        [
-          {
-            "publisherName": "keremist",
-            "content": "true!",
-            "like": 0
-          }
-        ]
+      "publishDate": "2025-06-24T17:12:02+03:00",
+      "likeAmount": 6,
+      "comments": [
+        {
+          "publisherName": "keremist",
+          "content": "true!",
+          "likeAmount": 0
+        }
+      ]
     }
   ]
 }

@@ -1,21 +1,20 @@
 
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 
 
 
 const JsonData = () => {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState<Object[]>([]);
 
     const getData = () => {
-        const requestOptions = {
-        // method: "GET",
-        // redirect: "follow",
-        };
 
-        fetch("http://localhost:3030/posts", requestOptions)
+        fetch("http://localhost:3030/posts")
         .then((response) => response.json())
-        .then((result) => setPosts(result))
+        .then((result) => {
+            setPosts(result);
+        })
         .catch((error) => console.log("error", error));
+    
   };
 
   useEffect(() => {
@@ -27,4 +26,4 @@ const JsonData = () => {
 } 
 
 
-export default JsonData;
+export default JsonData
