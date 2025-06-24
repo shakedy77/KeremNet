@@ -3,23 +3,21 @@
     {
       "publisherName": "keremist",
       "content": "i really love green and the number six",
-      "postingDate": "Mon Jun 23 2025 18:06:36",
-      "like": true,
-      "comments": {
+      "postingDate": "2012-04-23T18:25:43.511Z",
+      "like": 66,
+      "comments": 
         [
         {
           "publisherName" :"keremist1",
           "content":"wow!",
-          "like":true
+          "like":6
         },
         {
           "publisherName": "keremist1",
           "content": "wow!",
-          "like": true
+          "like": 6
         }
         ]
-      }
     }
   ]
-
 }

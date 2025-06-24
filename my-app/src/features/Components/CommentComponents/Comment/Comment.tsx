@@ -1,10 +1,11 @@
-import React, { ReactElement } from "react";
+import  { ReactElement } from "react";
 import Like from "../../Like/Like";
-import './Comment.css'
-import Props from "../../../Interfaces/CommentPropsInterface/CommentPropsInterface";
+import CommentModel from "../../../Models/CommentModel/CommentModel";
 
-const Comment = ({publisherName, content, likeAmount=0} : Props) : ReactElement => {
-    return <div className="Comment">{publisherName} : {content} <Like initialNumber={likeAmount}></Like></div>
+import './Comment.css';
+
+const Comment = (commentModel : CommentModel) : ReactElement => {
+    return <div className="Comment">{commentModel.publisherName} : {commentModel.content} <Like initialNumber={commentModel.likeAmount}></Like></div>
 }
 
 export default Comment;
