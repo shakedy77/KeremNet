@@ -1,11 +1,11 @@
 import React from "react";
 import Comment from "../Comment/Comment";
-import CommentProps from "../../../Interfaces/CommentPropsInterface/CommentPropsInterface";
+import CommentModel from "../../../Models/CommentModel/CommentModel";
 
 import './CommentList.css'
 
 interface Props{
-    items : CommentProps[]
+    items : CommentModel[]
 }
 
 const CommentList = ({items} : Props) => {
