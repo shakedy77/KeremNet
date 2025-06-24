@@ -1,22 +1,22 @@
-import React, { ReactElement, useState} from "react";
+import  { ReactElement, useState} from "react";
 import InputBox from "../../Components/InputBox/InputBox";
-import Comment from "../../Components/CommentComponents/Comment/Comment";
 import CommentList from "../../Components/CommentComponents/CommentList/CommentList";
 import useList from "../../Hooks/ListHook/useList";
+import CommentProps from "../../Interfaces/CommentPropsInterface/CommentPropsInterface";
+
 import './CommentExpandableList.css'
 
-interface commentProps{publisherName : String ,content : String, likeAmount : number};
 
 
 interface Props{
-    initialComments : commentProps[]
+    initialComments : CommentProps[]
 }
 
 
 const CommentExpandableList = ({initialComments} : Props): ReactElement => {
     const [inputValue, setInputValue] = useState<string>('');
     // const [listValue, setListValue] = useState<ReactElement[]>([]);
-    const [listValue, AddItem] = useList<commentProps>(initialComments);
+    const [listValue, AddItem] = useList<CommentProps>(initialComments);
     // const AddItem = (): void =>{
     //     listValue.push(<Comment publisherName="current_user"content={inputValue}></Comment>);
     //     setListValue([...listValue]);

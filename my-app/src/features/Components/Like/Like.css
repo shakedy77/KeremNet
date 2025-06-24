@@ -4,11 +4,11 @@
     height: fit-content;
 }
 
-.likeButtonOn{
+.like-button-on{
     background-color: red;
 }
 
-.likeButtonOff{
+.like-button-off{
     background-color: transparent;
 }
 
