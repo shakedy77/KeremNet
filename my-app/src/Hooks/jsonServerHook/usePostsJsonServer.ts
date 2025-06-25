@@ -4,7 +4,7 @@ import PostModel from "../../Models/PostModel/PostModel";
 
 
 
-const PostsJsonData = () :  PostModel[]=> {
+const usePostsJsonData = () :  PostModel[]=> {
   const [posts, setPosts] = useState<any[]>([]);
 
   const getData = () => {
@@ -27,4 +27,4 @@ const PostsJsonData = () :  PostModel[]=> {
 } 
 
 
-export default PostsJsonData
+export default usePostsJsonData
