@@ -1,3 +1,24 @@
 .Page{
     background-color: lightgreen;
 }
+
+.Page > h1{
+    background: green;
+    border-left: 2vw solid darkgreen;
+    color: black;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 4vw;
+    max-width: 100%;
+    overflow: auto;
+    padding: 2vw 4vw;
+    display: block;
+    word-wrap: break-word;
+}
+
+.PostList{
+    height: 100vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

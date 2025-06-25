@@ -6,7 +6,7 @@ import PostModel from "../../Models/PostModel/PostModel";
 
 const LoadedPosts = ():ReactElement =>{
     const posts = JsonData();
-    return <div>
+    return <div className="LoadedPosts">
         {(posts as PostModel[]).map((post) => {
             return <Post publisherName={post.publisherName} 
             publishDate={new Date(post.publishDate)} 

@@ -1,8 +1,8 @@
 .Comment{
-  width: fit-content;
+  width: 90%;
   height: fit-content;
   padding: 1vw;
-  border: 1vw solid gray;
-  border-radius: 2vw;
+  border: 0.5vw solid rgb(21, 172, 36);
+  border-radius: 0.5vw;
   margin: 0;
 }

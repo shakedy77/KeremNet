@@ -6,7 +6,14 @@ import './Page.css'
 
 const Page = ():ReactElement =>{
     return <div className="Page">
-        <LoadedPosts></LoadedPosts>
+        <title>Kerem Net</title>
+        <h1>Kerem Net</h1>
+        <div>
+            <div className="PostList">
+            <LoadedPosts></LoadedPosts>
+            </div>
+        </div>
+        
     </div>
 }
 
