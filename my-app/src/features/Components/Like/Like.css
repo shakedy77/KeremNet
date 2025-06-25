@@ -1,0 +1,14 @@
+.Button{
+    color: black;
+    width: fit-content;
+    height: fit-content;
+}
+
+.like-button-on{
+    background-color: red;
+}
+
+.like-button-off{
+    background-color: transparent;
+}
+
