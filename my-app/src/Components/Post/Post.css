@@ -1,8 +1,10 @@
+
 .post{
-    width: fit-content;
+  width: fit-content;
   height: fit-content;
   padding: 1vw;
   border: 1vw solid green;
+  background-color: rgb(79, 212, 79);
   border-radius: 2vw;
   margin: 0;
 }

@@ -1,6 +1,17 @@
 .comment-list{
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     padding: 1vw;
-    border: 1vw solid transparent;
+    margin: auto;
+    display: inline-block;
 }
+
+.comment-list > .comment{
+    width: 80%;
+    height: fit-content;
+    padding: 0.2vw;
+
+    display: inline-block;
+    margin: auto;
+}
+

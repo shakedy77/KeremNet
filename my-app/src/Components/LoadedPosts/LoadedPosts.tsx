@@ -1,11 +1,14 @@
 import React, { ReactElement } from "react";
 import Post from "../Post/Post";
-import JsonData from "../../Hooks/jsonServerHook/usePostsJsonServer";
+import usePostsJsonData from "../../Hooks/jsonServerHook/usePostsJsonServer";
 import PostModel from "../../Models/PostModel/PostModel";
+
+import './LoadedPosts.css'
 
 
 const LoadedPosts = ():ReactElement =>{
-    const posts : PostModel[] = JsonData();
+
+    const posts : PostModel[] = usePostsJsonData();
     return <div className="loaded-posts">
         {posts.map((post) => {
             return <Post postModel={{ 

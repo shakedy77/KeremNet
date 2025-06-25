@@ -10,6 +10,7 @@ interface Props{
     children? : ReactNode
 }
 
+
 const Post = ({postModel} : Props):ReactElement => {
     return <div className="post">
         <h2>{postModel.publisherName}</h2>
