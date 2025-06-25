@@ -1,8 +1,8 @@
-.Page{
+.page{
     background-color: lightgreen;
 }
 
-.Page > h1{
+.page > h1{
     background: green;
     border-left: 2vw solid darkgreen;
     color: black;
@@ -16,7 +16,7 @@
     text-align: center;
 }
 
-.Page > h1 > .logoPicture{
+.page > h1 > .logo-picture{
     max-width: 10%;
     margin-left: auto; 
     margin-right: 0;
@@ -24,7 +24,7 @@
     outline: none;
 }
 
-.PostList{
+.post-list{
     height: 100vh;
     display: flex;
     justify-content: center;

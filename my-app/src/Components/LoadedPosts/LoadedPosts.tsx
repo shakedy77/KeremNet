@@ -3,6 +3,8 @@ import Post from "../Post/Post";
 import JsonData from "../../Hooks/jsonServerHook/usePostsJsonServer";
 import PostModel from "../../Models/PostModel/PostModel";
 
+import './LoadedPosts.css'
+
 
 const LoadedPosts = ():ReactElement =>{
 

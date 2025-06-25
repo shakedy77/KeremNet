@@ -1,4 +1,4 @@
-.CommentList{
+.comment-list{
     width: 100%;
     height: fit-content;
     padding: 1vw;
@@ -6,13 +6,12 @@
     display: inline-block;
 }
 
-.CommentList > .Comment{
+.comment-list > .comment{
     width: 80%;
     height: fit-content;
     padding: 0.2vw;
 
     display: inline-block;
     margin: auto;
-    /* display: inline; */
 }
 

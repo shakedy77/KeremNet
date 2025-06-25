@@ -7,12 +7,12 @@ import keremLogo from "../../../Assets/imgs/keremNetLogo.png"
 import './Page.css' 
 
 const Page = ():ReactElement =>{
-    return <div className="Page">
+    return <div className="page">
         <title>Kerem Net </title>
-        <h1>Kerem Net <img className="logoPicture" src={keremLogo} alt="pic" /></h1>
+        <h1>Kerem Net <img className="logo-picture" src={keremLogo} alt="pic" /></h1>
         <NavigationBar></NavigationBar>
         <div>
-            <div className="PostList">
+            <div className="post-list">
             <LoadedPosts></LoadedPosts>
             </div>
         </div>

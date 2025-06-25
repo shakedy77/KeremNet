@@ -2,7 +2,7 @@
     padding: 0;
     border: 0;
     border: 0.5vw solid green;
-    background-color: green;
+    background-color: gr;
     
 }
 
@@ -10,6 +10,7 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    background-color: green;
 }
 
 .navigation-bar > nav > div{
@@ -17,7 +18,10 @@
     display: inline;
     margin: 1vw;
     justify-content: space-between;
-
     
+}
+
+.navigation-bar > nav > div:hover{
+    background-color: darkgreen;
 }
 
