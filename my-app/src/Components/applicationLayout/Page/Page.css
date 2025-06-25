@@ -2,22 +2,30 @@
     background-color: lightgreen;
 }
 
-.page > h1{
+.title{
     background: green;
     border-left: 2vw solid darkgreen;
-    color: black;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 4vw;
-    max-width: 100%;
-    overflow: auto;
-    display: block;
+    display: flex;
     word-wrap: break-word;
     text-align: center;
 }
 
-.page > h1 > .logo-picture{
-    max-width: 10%;
+.title > h1{
+    color: black;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 5vw;
+    max-width: 100%;
+    overflow: auto;
+    display: block;
+    align-self: center;
+    padding-left: 10vw;
+    border-left: 2vw;
+
+}
+
+.title > .logo-picture{
+    max-width: 15%;
     margin-left: auto; 
     margin-right: 0;
     float: right;

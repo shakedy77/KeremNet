@@ -9,7 +9,7 @@ import './Page.css'
 const Page = ():ReactElement =>{
     return <div className="page">
         <title>Kerem Net </title>
-        <h1>Kerem Net <img className="logo-picture" src={keremLogo} alt="pic" /></h1>
+        <div className="title"> <h1>Kerem Net </h1> <img className="logo-picture" src={keremLogo} alt="pic" /></div>
         <NavigationBar></NavigationBar>
         <div>
             <div className="post-list">
