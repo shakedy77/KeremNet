@@ -9,7 +9,7 @@ interface Props{
 }
 
 const Comment = ({commentModel} : Props) : ReactElement => {
-    return <div className="Comment">{commentModel.publisherName} : {commentModel.content} <Like initialNumber={commentModel.likeAmount}></Like></div>
+    return <div className="comment">{commentModel.publisherName} : {commentModel.content} <Like initialNumber={commentModel.likeAmount}></Like></div>
 }
 
 export default Comment;
