@@ -1,7 +1,6 @@
 import React, { ReactElement, ReactNode, } from "react";
 import Like from "../Like/Like";
 import CommentList from "../CommentComponents/CommentList/CommentList";
-// import CommentExpandableList from "../CommentComponents/CommentExpandableList/CommentExpandableList";
 import PostModel from "../../Models/PostModel/PostModel";
 
 import './Post.css'
@@ -11,8 +10,9 @@ interface Props{
     children? : ReactNode
 }
 
-const Post = ({postModel}: Props):ReactElement => {
-    return <div className="Post">
+
+const Post = ({postModel} : Props):ReactElement => {
+    return <div className="post">
         <h2>{postModel.publisherName}</h2>
         <p>{postModel.content}</p>
         <p>{`${postModel.publishDate.toDateString()} ${postModel.publishDate.toLocaleTimeString()}`}</p>

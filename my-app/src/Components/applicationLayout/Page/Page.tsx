@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 
 import LoadedPosts from "../../LoadedPosts/LoadedPosts";
 import NavigationBar from "../NavigationBar/NavigationBar";
-import keremLogo from "../imgs/keremNetLogo.png"
+import keremLogo from "../../../Assets/imgs/keremNetLogo.png"
 
 import './Page.css' 
 
