@@ -1,6 +1,15 @@
 .CommentList{
-    width: fit-content;
+    width: 50%;
     height: fit-content;
     padding: 1vw;
-    border: 1vw solid transparent;
+
+    margin: auto;
+}
+
+.CommentList > .Comment{
+    width: 80%;
+    height: fit-content;
+    padding: 1vw;
+
+    margin: auto;
 }

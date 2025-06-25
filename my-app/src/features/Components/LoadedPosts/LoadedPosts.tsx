@@ -2,7 +2,6 @@ import React, { ReactElement } from "react";
 import Post from "../Post/Post";
 import JsonData from "../../../data/json-server/json-server";
 import PostModel from "../../Models/PostModel/PostModel";
-import CommentModel from "../../Models/CommentModel/CommentModel";
 
 
 const LoadedPosts = ():ReactElement =>{
