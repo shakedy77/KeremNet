@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import Post from "../Post/Post";
-import JsonData from "../../../data/json-server/json-server";
+import JsonData from "../../Hooks/PostsJsonServerHook/usePostsJsonServer";
 import PostModel from "../../Models/PostModel/PostModel";
 
 

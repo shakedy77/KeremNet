@@ -1,15 +1,17 @@
 .CommentList{
-    width: 50%;
+    width: 100%;
     height: fit-content;
     padding: 1vw;
-
     margin: auto;
+    display: inline-block;
 }
 
 .CommentList > .Comment{
     width: 80%;
     height: fit-content;
-    padding: 1vw;
+    padding: 0.2vw;
 
+    display: inline-block;
     margin: auto;
+    /* display: inline; */
 }
