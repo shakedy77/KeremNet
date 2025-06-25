@@ -16,6 +16,14 @@
     word-wrap: break-word;
 }
 
+.Page > h1 > .logoPicture{
+    max-width: 10%;
+    margin-left: auto; 
+    margin-right: 0;
+    float: right;
+    outline: none;
+}
+
 .PostList{
     height: 100vh;
     display: flex;
