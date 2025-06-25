@@ -7,8 +7,12 @@ router.get("/", (req, res) => {
   res.send('welcome to kerem server!');
 });
 
-router.get("/post", (req, res) => {
+router.get("/post/", (req, res) => {
   res.send(jsondb.posts);
 });
+
+router.get("/post/:name/", (req, res) => {
+  res.send(jsondb.posts.filter(post => post.publisherName === req.params.name))
+})
 
 export default router;
