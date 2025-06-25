@@ -15,4 +15,18 @@ router.get("/post/:name/", (req, res) => {
   res.send(jsondb.posts.filter(post => post.publisherName === req.params.name))
 })
 
+function getUserList(){
+  return [...new Set(jsondb.posts.map(post => post.publisherName))]
+}
+
+router.get("/user/", (req,res) => {
+  res.send(getUserList())
+})
+
+router.get("/user/:name/", (req, res) => {
+  if (getUserList().includes(req.params.name)){
+    res.send(`user ${req.params.name} profile: he is really cool!`)
+  }
+})
+
 export default router;
