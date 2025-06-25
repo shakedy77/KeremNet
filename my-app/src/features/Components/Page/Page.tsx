@@ -10,12 +10,14 @@ const Page = ():ReactElement =>{
     return <div>
         {/* <Post publisherName={"user"} content={"test test test test test"} publishDate={current_date} likeAmount={10} comments={[{publisherName:'keremist',content:"wow!",likeAmount:3}]}></Post> */}
         {(posts as PostModel[]).map((post) => {
-            return <Post publisherName={post.publisherName} 
-            publishDate={new Date(post.publishDate)} 
-            content={post.content} 
-            comments={post.comments} 
-            likeAmount={post.likeAmount}></Post>
+            return <Post postModel={{
+                publisherName:post.publisherName, 
+                publishDate:(new Date(post.publishDate)), 
+                content:post.content, 
+                comments:post.comments, 
+                likeAmount:post.likeAmount}}></Post>
         })}
+
     </div>
 }
 

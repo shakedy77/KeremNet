@@ -11,9 +11,9 @@ interface Props{
 const CommentList = ({items} : Props) => {
     return <div className="CommentList">
         {items.map(item => {
-            return <Comment publisherName={item.publisherName} 
-                            content={item.content}
-                            likeAmount={item.likeAmount}></Comment>})}
+            return <Comment commentModel={{publisherName: item.publisherName,
+                                        content:item.content,
+                                        likeAmount:item.likeAmount}}></Comment>})}
     </div>
 }
 

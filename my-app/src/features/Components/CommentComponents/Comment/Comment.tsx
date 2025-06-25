@@ -4,7 +4,11 @@ import CommentModel from "../../../Models/CommentModel/CommentModel";
 
 import './Comment.css';
 
-const Comment = (commentModel : CommentModel) : ReactElement => {
+interface Props{
+    commentModel : CommentModel
+}
+
+const Comment = ({commentModel} : Props) : ReactElement => {
     return <div className="Comment">{commentModel.publisherName} : {commentModel.content} <Like initialNumber={commentModel.likeAmount}></Like></div>
 }
 

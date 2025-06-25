@@ -1,12 +1,15 @@
 import React, { ReactElement, } from "react";
 import Like from "../Like/Like";
 import CommentList from "../CommentComponents/CommentList/CommentList";
-// import CommentExpandableList from "../CommentComponents/CommentExpandableList/CommentExpandableList";
 import PostModel from "../../Models/PostModel/PostModel";
 
 import './Post.css'
 
-const Post = (postModel : PostModel):ReactElement => {
+interface Props{
+    postModel : PostModel
+}
+
+const Post = ({postModel} : Props):ReactElement => {
     return <div className="Post">
         <h2>{postModel.publisherName}</h2>
         <p>{postModel.content}</p>
