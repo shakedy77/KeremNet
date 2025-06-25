@@ -5,7 +5,7 @@ import PostModel from "../../Models/PostModel/PostModel";
 
 
 const LoadedPosts = ():ReactElement =>{
-    const posts = JsonData();
+    const posts : PostModel[] = JsonData();
     return <div className="loaded-posts">
         {posts.map((post) => {
             return <Post postModel={{ 
