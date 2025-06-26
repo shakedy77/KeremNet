@@ -1,6 +1,14 @@
 import express from 'express';
 
 import jsondb from '../../DBs/db.json'
+
+import PostModel from '../../my-app/src/Models/PostModel/PostModel'
+interface Props{
+    postModel : PostModel
+}
+
+
+
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -26,6 +34,9 @@ router.get("/user/", (req,res) => {
 router.get("/user/:name/", (req, res) => {
   if (getUserList().includes(req.params.name)){
     res.send(`user ${req.params.name} profile: he is really cool!`)
+  }
+  else{
+    res.send("user does not exist!")
   }
 })
 
