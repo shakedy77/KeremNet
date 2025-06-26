@@ -30,6 +30,42 @@
           "likeAmount": 0
         }
       ]
+    },
+    {
+      "publisherName": "zoey",
+      "content": "i really love green and the number six",
+      "publishDate": "2025-06-24T17:12:02+03:00",
+      "likeAmount": 66,
+      "comments": [
+        {
+          "publisherName": "keremist1",
+          "content": "wow!",
+          "likeAmount": 6
+        },
+        {
+          "publisherName": "keremist1",
+          "content": "wow 2!",
+          "likeAmount": 66
+        }
+      ]
+    },
+    {
+      "publisherName": "keremist",
+      "content": "six.",
+      "publishDate": "2025-06-24T17:12:02+03:00",
+      "likeAmount": 666666666,
+      "comments": [
+        {
+          "publisherName": "keremist1",
+          "content": "wow!",
+          "likeAmount": 66666
+        },
+        {
+          "publisherName": "keremist1",
+          "content": "wow!",
+          "likeAmount": 66666
+        }
+      ]
     }
   ]
 }
