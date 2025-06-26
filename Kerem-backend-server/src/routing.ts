@@ -1,48 +1,37 @@
 import express from 'express';
+import { Request, Response } from "express";
 
-import jsondb from '../../DBs/db.json'
-
-import PostModel from '../../my-app/src/Models/PostModel/PostModel'
-interface Props{
-    postModel : PostModel
-}
-
-
+import services from './Services';
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", (req : Request, res :  Response) : void  => {
   res.send('welcome to kerem server!');
 });
 
-router.get("/post/", (req, res) => {
-  res.send(jsondb.posts);
+router.get("/post/", (req : Request, res :  Response) : void  => {
+  res.send(services.getAllPosts());
 });
 
-router.get("/post/:name/", (req, res) => {
-  if (typeof req.params.name === "string"){
-    res.send(jsondb.posts.filter(post => post.publisherName === req.params.name));
+router.get("/post/:name/", (req : Request, res :  Response) : void  => {
+  if (req.params.name !== undefined){
+    res.send(services.getPostsByName(req.params.name));
   }
   else{
     res.send("invalid parameters!");
   }
-  
 })
 
-function getUserList(){
-  return [...new Set(jsondb.posts.map(post => post.publisherName))];
-}
-
-router.get("/user/", (req,res) => {
-  res.send(getUserList());
+router.get("/user/", (req : Request, res :  Response) : void => {
+  res.send(services.getUserList());
 })
 
-router.get("/user/:name/", (req, res) => {
-  if (typeof req.params.name !== "string"){
+router.get("/user/:name/", (req : Request, res :  Response) : void => {
+  if (req.params.name !== undefined){
     res.send("invalid parameters!");
   }
   else{
-    if (getUserList().includes(req.params.name)){
+    if (services.getUserList().includes(req.params.name)){
       res.send(`user ${req.params.name} profile: he is really cool!`);
   }
     else{
