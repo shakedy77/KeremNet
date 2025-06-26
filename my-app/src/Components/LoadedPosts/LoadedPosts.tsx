@@ -1,13 +1,18 @@
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 import Post from "../Post/Post";
-import usePostsJsonData from "../../Hooks/jsonServerHook/usePostsJsonServer";
+import useJsonData from "../../Hooks/jsonServerHook/useJsonServer";
 import PostModel from "../../Models/PostModel/PostModel";
 
 import './LoadedPosts.css'
 
+interface Props{
+    serverPath : string;
+}
 
-const LoadedPosts = ():ReactElement =>{
-    const posts : PostModel[] = usePostsJsonData<PostModel[]>();
+
+const LoadedPosts = ({serverPath} : Props):ReactElement =>{
+    const posts : PostModel[] = useJsonData<PostModel>({path:serverPath});
+
     return <div className="loaded-posts">
         {posts.map((post) => {
             return <Post postModel={{ 
