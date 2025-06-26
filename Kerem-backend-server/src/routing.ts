@@ -20,24 +20,36 @@ router.get("/post/", (req, res) => {
 });
 
 router.get("/post/:name/", (req, res) => {
-  res.send(jsondb.posts.filter(post => post.publisherName === req.params.name))
+  if (typeof req.params.name === "string"){
+    res.send(jsondb.posts.filter(post => post.publisherName === req.params.name));
+  }
+  else{
+    res.send("invalid parameters!");
+  }
+  
 })
 
 function getUserList(){
-  return [...new Set(jsondb.posts.map(post => post.publisherName))]
+  return [...new Set(jsondb.posts.map(post => post.publisherName))];
 }
 
 router.get("/user/", (req,res) => {
-  res.send(getUserList())
+  res.send(getUserList());
 })
 
 router.get("/user/:name/", (req, res) => {
-  if (getUserList().includes(req.params.name)){
-    res.send(`user ${req.params.name} profile: he is really cool!`)
+  if (typeof req.params.name !== "string"){
+    res.send("invalid parameters!");
   }
   else{
-    res.send("user does not exist!")
+    if (getUserList().includes(req.params.name)){
+      res.send(`user ${req.params.name} profile: he is really cool!`);
   }
+    else{
+      res.send("user does not exist!");
+  }
+  }
+  
 })
 
 export default router;
