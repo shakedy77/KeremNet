@@ -7,8 +7,7 @@ import './LoadedPosts.css'
 
 
 const LoadedPosts = ():ReactElement =>{
-
-    const posts : PostModel[] = usePostsJsonData();
+    const posts : PostModel[] = usePostsJsonData<PostModel[]>();
     return <div className="loaded-posts">
         {posts.map((post) => {
             return <Post postModel={{ 
