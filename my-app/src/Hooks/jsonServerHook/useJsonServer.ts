@@ -24,7 +24,7 @@ function useJsonData<T>({path} : Props) : T[]{
 
   useEffect(() => {
     getData();
-  }, [path]);
+  }, [path,]);
 
   return data;
 

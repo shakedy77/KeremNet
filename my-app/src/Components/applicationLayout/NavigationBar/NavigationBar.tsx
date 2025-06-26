@@ -12,6 +12,9 @@ const NavigationBar = () : ReactElement => {
             <Link to="/PostPage">
                 <button className="option">PostPage</button>
             </Link>
+            <Link to="/UploadPage">
+                <button className="option">UploadPage</button>
+            </Link>
             <Link to="/GrapePage">
                 <button className="option">GrapePage</button>
             </Link>
