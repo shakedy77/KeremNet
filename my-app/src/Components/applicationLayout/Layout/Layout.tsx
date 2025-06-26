@@ -8,7 +8,7 @@ import './Layout.css';
 
 
 const Layout = (): ReactElement => {
-    return       <div className="layout">
+    return <div className="layout">
         <title>Kerem Net </title>
         <div className="title"> <h1>Kerem Net </h1> <img className="logo-picture" src={keremLogo} alt="pic" /></div>
           <NavigationBar/>

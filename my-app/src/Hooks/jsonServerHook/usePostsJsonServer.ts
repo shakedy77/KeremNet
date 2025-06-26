@@ -9,15 +9,15 @@ interface Props{
 }
 
 
-function usePostsJsonData<T>({path} : Props={path:serverPath}){
-  const [posts, setPosts] = useState<any[]>([]);
+function useJsonData<T>({path} : Props={path:serverPath}) : T[]{
+  const [data, setData] = useState<any[]>([]);
 
   const getData = () => {
 
       fetch(path)
       .then((response) => response.json())
       .then((result) => {
-          setPosts(result);
+          setData(result);
       })
       .catch((error) => console.log("error", error));
     
@@ -27,9 +27,9 @@ function usePostsJsonData<T>({path} : Props={path:serverPath}){
     getData();
   }, []);
 
-  return posts;
+  return data;
 
 } 
 
 
-export default usePostsJsonData
+export default useJsonData
