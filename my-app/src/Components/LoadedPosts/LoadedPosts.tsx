@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { JSX, ReactElement } from "react";
 import Post from "../Post/Post";
 import useJsonData from "../../Hooks/jsonServerHook/useJsonServer";
 import PostModel from "../../Models/PostModel/PostModel";
@@ -12,9 +12,7 @@ interface Props{
 
 const LoadedPosts = ({serverPath} : Props):ReactElement =>{
     const posts : PostModel[] = useJsonData<PostModel>({path:serverPath});
-
-    return <div className="loaded-posts">
-        {posts.map((post) => {
+    const postElements : JSX.Element[] = posts.map((post) => {
             return <Post postModel={{ 
              publisherName:post.publisherName,
              content:post.content,
@@ -22,7 +20,11 @@ const LoadedPosts = ({serverPath} : Props):ReactElement =>{
              likeAmount:post.likeAmount,
              comments:post.comments} as PostModel}>
             </Post>
-        })}
+        });
+    return <div className="loaded-posts">
+        {
+            (posts === undefined || posts.length === 0 ) ? "oops, nothing to see here!" : postElements
+        }
     </div>
 }
 
