@@ -1,26 +1,20 @@
 import express from 'express';
+import { Request, Response } from "express";
 
 import jsondb from '../../DBs/db.json'
 
-import PostModel from '../../my-app/src/Models/PostModel/PostModel'
-interface Props{
-    postModel : PostModel
-}
-
-
-
 const router = express.Router();
 
-router.get("/", (req, res) => {
+router.get("/", (req : Request, res :  Response) : void  => {
   res.send('welcome to kerem server!');
 });
 
-router.get("/post/", (req, res) => {
+router.get("/post/", (req : Request, res :  Response) : void  => {
   res.send(jsondb.posts);
 });
 
-router.get("/post/:name/", (req, res) => {
-  if (typeof req.params.name === "string"){
+router.get("/post/:name/", (req : Request, res :  Response) : void  => {
+  if (req.params.name !== undefined){
     res.send(jsondb.posts.filter(post => post.publisherName === req.params.name));
   }
   else{
@@ -29,16 +23,16 @@ router.get("/post/:name/", (req, res) => {
   
 })
 
-function getUserList(){
+function getUserList() : string[] {
   return [...new Set(jsondb.posts.map(post => post.publisherName))];
 }
 
-router.get("/user/", (req,res) => {
+router.get("/user/", (req : Request, res :  Response) : void => {
   res.send(getUserList());
 })
 
-router.get("/user/:name/", (req, res) => {
-  if (typeof req.params.name !== "string"){
+router.get("/user/:name/", (req : Request, res :  Response) : void => {
+  if (req.params.name !== undefined){
     res.send("invalid parameters!");
   }
   else{
