@@ -3,4 +3,5 @@
     display: flex;
     flex-flow: column wrap;  
     width: 20vw;
+    padding: 0.5vw;
 }

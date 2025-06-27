@@ -1,5 +1,6 @@
-.page{
+.layout{
     background-color: lightgreen;
+    height: fit-content;
 }
 
 .title{
@@ -30,11 +31,4 @@
     margin-right: 0;
     float: right;
     outline: none;
-}
-
-.post-list{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
