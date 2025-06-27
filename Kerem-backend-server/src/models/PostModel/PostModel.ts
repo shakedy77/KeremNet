@@ -1,4 +1,4 @@
-import CommentModel from "../CommentModel/CommentModel"
+import CommentModel from "./../CommentModel/CommentModel";
 
 export default class PostModel{
     publisherName : string

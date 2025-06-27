@@ -2,7 +2,9 @@ import React, { ReactElement } from "react";
 
 
 const GrapePage = () : ReactElement => {
-    return <div>GrapePage</div>
+    return <div>"WheeEN I grooOooW Uuup I will beeeEE pilooOot"
+
+"GRAPE!!"</div>
 }
 
 

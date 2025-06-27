@@ -2,9 +2,12 @@ import express from 'express';
 import { Request, Response } from "express";
 
 import services from './Services';
+import PostModel from './models/PostModel/PostModel';
 
 const router = express.Router();
 
+
+//get methods
 router.get("/", (req : Request, res :  Response) : void  => {
   res.send('welcome to kerem server!');
 });
@@ -38,6 +41,11 @@ router.get("/user/:name/", (req : Request, res :  Response) : void => {
       res.send("user does not exist!");
   }
   }
+})
+
+//post methods
+router.post('/post/', (req : Request, res :  Response) : void => {
+  const newPost : PostModel = req.body;
   
 })
 
