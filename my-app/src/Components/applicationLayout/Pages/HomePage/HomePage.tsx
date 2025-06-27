@@ -6,7 +6,7 @@ import './HomePage.css'
 const HomePage = ():ReactElement =>{
     return <div>
             <div className="post-list">
-            <LoadedPosts serverPath="http://localhost:3060/post"></LoadedPosts>
+            <LoadedPosts args="/post"></LoadedPosts>
 
             </div>
         </div>

@@ -5,25 +5,35 @@ import PostModel from "../../Models/PostModel/PostModel";
 
 import './LoadedPosts.css'
 
+
+const defaultServerPath = "http://localhost:3060";
+
 interface Props{
-    serverPath : string;
+    args : string;
 }
 
 
-const LoadedPosts = ({serverPath} : Props):ReactElement =>{
-    const posts : PostModel[] = useJsonData<PostModel>({path:serverPath});
-    const postElements : JSX.Element[] = posts.map((post) => {
-            return <Post postModel={{ 
-             publisherName:post.publisherName,
-             content:post.content,
-             publishDate:(new Date(post.publishDate)),
-             likeAmount:post.likeAmount,
-             comments:post.comments} as PostModel}>
-            </Post>
-        });
+const LoadedPosts = ({args} : Props = {args:""}):ReactElement =>{
+    const posts : PostModel[] | undefined = useJsonData<PostModel>({path:(defaultServerPath + args)});
+    let postElements : any = null;
+    if (posts === undefined){
+        postElements = "post is in loading!";
+    }
+    else{
+        postElements = posts.map((post) => {
+        return <Post postModel={{ 
+            publisherName:post.publisherName,
+            content:post.content,
+            publishDate:(new Date(post.publishDate)),
+            likeAmount:post.likeAmount,
+            comments:post.comments} as PostModel}>
+        </Post>
+    });
+    }
+    
     return <div className="loaded-posts">
         {
-            (posts === undefined || posts.length === 0 ) ? "oops, nothing to see here!" : postElements
+            (posts !== undefined && posts.length === 0 ) ? "oops, no posts to see here!" : postElements
         }
     </div>
 }

@@ -8,9 +8,9 @@ interface Props{
   path : string;
 }
 
-
-function useJsonData<T>({path} : Props) : T[]{
-  const [data, setData] = useState<any[]>([]);
+//returns undefined if data is still loading
+function useJsonData<T>({path} : Props) : T[] | undefined{
+  const [data, setData] = useState<T[]>([]);
 
   const getData = () => {
       fetch(path)
