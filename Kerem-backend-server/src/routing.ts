@@ -44,9 +44,18 @@ router.get("/user/:name/", (req : Request, res :  Response) : void => {
 })
 
 //post methods
-router.post('/post/', (req : Request, res :  Response) : void => {
+router.post('/uploadPost', async (req : Request, res :  Response) : Promise<void> => {
   const newPost : PostModel = req.body;
-  
+  try{
+    console.log(newPost);
+    services.postNewPost(newPost);
+    res.status(200);
+    res.send('OK');
+  }
+  catch (Exception){
+    res.status(400);
+    res.send('FAILED');
+  }
 })
 
 export default router;
