@@ -13,11 +13,12 @@
     background-color: green;
 }
 
-.navigation-bar > nav > div{
-    height: 5vh;
+.option{
+    height: 3vh;
     display: inline;
     margin: 1vw;
     justify-content: space-between;
+    background-color: green;
     
 }
 

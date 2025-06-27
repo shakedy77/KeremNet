@@ -2,9 +2,12 @@ import express from 'express';
 import { Request, Response } from "express";
 
 import services from './Services';
+import PostModel from './models/PostModel/PostModel';
 
 const router = express.Router();
 
+
+//get methods
 router.get("/", (req : Request, res :  Response) : void  => {
   res.send('welcome to kerem server!');
 });
@@ -38,7 +41,21 @@ router.get("/user/:name/", (req : Request, res :  Response) : void => {
       res.send("user does not exist!");
   }
   }
-  
+})
+
+//post methods
+router.post('/uploadPost', async (req : Request, res :  Response) : Promise<void> => {
+  const newPost : PostModel = req.body;
+  try{
+    console.log(newPost);
+    services.postNewPost(newPost);
+    res.status(200);
+    res.send('OK');
+  }
+  catch (Exception){
+    res.status(400);
+    res.send('FAILED');
+  }
 })
 
 export default router;

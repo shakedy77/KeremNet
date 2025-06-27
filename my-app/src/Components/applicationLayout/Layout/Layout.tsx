@@ -1,23 +1,22 @@
 import React, { ReactElement } from "react";
+import { Outlet } from "react-router-dom";
 
-import LoadedPosts from "../../LoadedPosts/LoadedPosts";
+
 import NavigationBar from "../NavigationBar/NavigationBar";
 import keremLogo from "../../../Assets/imgs/keremNetLogo.png"
+import './Layout.css';
 
-import './Page.css' 
 
-const Page = ():ReactElement =>{
-    return <div className="page">
+const Layout = (): ReactElement => {
+    return <div className="layout">
         <title>Kerem Net </title>
         <div className="title"> <h1>Kerem Net </h1> <img className="logo-picture" src={keremLogo} alt="pic" /></div>
-        <NavigationBar></NavigationBar>
-        <div>
-            <div className="post-list">
-            <LoadedPosts></LoadedPosts>
-            </div>
+          <NavigationBar/>
+            <main>
+                <Outlet/>
+            </main>
+
         </div>
-        
-    </div>
 }
 
-export default Page;
+export default Layout;
